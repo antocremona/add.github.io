@@ -1,0 +1,5 @@
+En el archivo index.html sumé el SEO con las siguientes características:
+	Descripción: mediante la etiqueta meta name description, agregué un comentario que indica de qué se trata el sitio, de forma simple. Está en inglés debido a que está orientado a un equipo trilingüe y eventualmente podría ser de uso regional. 
+	Palabras clave: mediante la etiqueta meta name keywords, agregué las palabras clave que acompañarán a todas las páginas de mi sitio: "AXA (nombre de la empresa), tutoriales, callcenter
+
+En todas las páginas agregué comentarios en la etiqueta meta sobre cada sección.

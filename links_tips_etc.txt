@@ -1,0 +1,114 @@
+Aca les paso los links que use en la clase de hoy:
+Seguridad
+- Ver en la seccion de beneficios coder: .
+- W3C standards.
+- SSL Certified -> Lets encrypt	
+Imagenes:
+- Ver este repo: https://dacapdevila.github.io/new/
+- Ir a GTMetrix.com y testear https://dacapdevila.github.io/new/
+- Ver audit area y buscar (si aparece) 'Properly size images'
+Comprimir imagenes:
+- https://www.iloveimg.com/es/comprimir-imagen
+- https://imagecompressor.com/es/
+Imagenes en SVG:
+- https://undraw.co/
+SEO:
+- ¿Qué lenguaje habla con Google?
+- Agregar meta description con el valor: "We design and build digital products for startups & big companies all over the world"
+- Agregar meta keywords con el valor: "Develop, HTML, CSS, JS"
+Sitemap:
+- https://www.xml-sitemaps.com/
+- https://dacapdevila.github.io/new/
+Distribucion de web:
+- https://developers.google.com/search/mobile-sites/mobile-seo/separate-urls
+- https://developers.google.com/search/mobile-sites/mobile-seo/dynamic-serving
+- https://developers.google.com/search/mobile-sites/mobile-seo/responsive-design
+
+
+Git cheatsheet
+Pasos para crear un repositorio de Git
+Me ubico en la carpeta donde quiero crear mi proyecto
+Puedo usar el comando “cd”
+Puedo abrir la terminal posicionada en la carpeta 
+Dentro de la carpeta inicio el proyecto con el nombre que le asigne a mi repositorio
+git init nombre_repo
+Debería aparecer el mensaje “Initialized empty git repositorio in …”
+Comprobamos que el repositorio se creó
+Windos: dir nombre_repo
+Mac: ls
+Me ubico en el repo 
+cd nombre_repo
+Abro la terminal desde la carpeta del repo
+Los estados de git
+Hay tres estados en GIT: 
+Working directory 
+Staging area
+Repository
+Como agregar los archivos al Staging Area
+Utilizamos git add
+git add + nombreArchivo
+git add . agrega todos los archivos nuevos
+Compruebo que funcionó con git status
+Como pasar los archivos al repositorio local 
+Utilizo git commit 
+git commit -m “Un mensaje”
+Las ramas
+Como crear una rama:
+Verifico en que rama estoy 
+git branch
+Creo la rama que voy a usar 
+git branch nombreRama
+Verifico que se creó la rama 
+git branch -l
+Como movernos entre ramas
+Para moverme a la rama que cree uso el comando de git checkout 
+git checkout nombreRamaALaQueQuieroIr
+Verifico que me movi de rama
+git branch -l
+Como borrar una rama
+Me muevo a la rama principal “master”
+git checkout master
+Verifico que estoy en la rama de master
+git branch
+Procedo a borrara la rama que ya no voy a usar 
+git branch -D nombreRama
+Verifico que se borró la rama
+git branch
+Los commits
+Listar commits
+Utilizamos el comando git log —oneline
+git log --oneline
+Movernos a un commit
+Busco el numero de commit con git log --oneline 
+Me muevo a ese punto 
+git checkout numeroDeCommit
+Los branches
+Git merge
+Me ubico en la rama master que es a donde quiero fusionar los cambios usando el comando de git checkout master
+git checkout master
+Verifico que estoy en master con git branch
+git branch
+Realizo la fusión 
+git merge nombreRamaQueQuieroMergear
+
+
+GITHUB + GIT COMANDOS:
+git init: Inicia el repositorio LOCAL.
+git remote:
+	-v: Muestra los repositorios REMOTOS conectados a nuestro repositorio LOCAL.
+	add {nombre} {link}: Conecta el repositorio REMOTO con el nombre dado al repositorio LOCAL.
+	remove {nombre}: Desconecta el repositorio REMOTO del repositorio LOCAL.
+git status: Mostrarnos el estado de nuestro repositorio LOCAL y sus archivos.
+git commit -m {mensaje}: Se agrega el mensaje al commit (etiqueta) al conjunto de archivos a pushear.
+git push {nombredestino} {nombreorigen}: Enviar los commit desde nombreorigen (Repositorio LOCAL) a nombredestino (Repositorio REMOTO).
+git clone {link}: Clona un repositorio de GitHub a mi computadora
+git checkout -b {nombre}: Saltas a la rama con ese nombre, y si no existe la creas
+
+Para sass:
+npm init
+(Enter cuando llega a Is this Ok)
+npm install -D node-sass nodemon
+(editar el package.json >> después de la línea test)
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+npm run watch-css

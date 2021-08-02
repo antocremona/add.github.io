@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Referencias -->
+    <meta name="description" content="Take a moment to contact us. This site is for internal use only">
+    <meta name="keywords" content="axa, tutoriales, callcenter, formulario">
+    <meta name="robots" content="noindex">
+
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">    
+    <title>Contacto</title>
+</head>
+<body>
+    <header id="navStandardAxa">
+        <nav>
+            <!-- Logo -->
+            <a href="../index.html">
+                <img id="logoDiversityAxa" src="../images/axa_logo_lgbt_rgb_300dpi.png" alt="logo axa assistance diversidad">
+            </a>
+            <!-- Barra de navegación -->
+            <ul class="nav nav-masthead justify-content-center float-md-end">
+                <li><a href="start.html">Start</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="ttt.html">Tips / Tutoriales</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+        </ol>
+    </nav>
+    <main class="cuerpoStandard">
+        <!-- Formulario de contacto -->
+        <form action="../index.html" method="post" class="contactForm">
+            <fieldset>
+                <legend>Contactanos!</legend>
+                <label for="campo_name"></label>
+                <input type="text" name="campo_name" placeholder="Ingresá tu nombre"> <br>
+                <label for="campo_email"></label>
+                <input type="email" name="campo_mail" placeholder="Ingresá tu mail"> <br>
+                <label for="tipo_contacto"></label>
+                <select name="tipo_contacto">
+                    <option value="Opt1">Consulta</option>
+                    <option value="Opt2">Sugerencia</option>
+                    <option value="Opt3">Reclamo</option>
+                    <option value="Opt4">Empleo</option>
+                </select> <br>
+                <label for="campo_mensaje"></label>
+                <textarea name="campo_mensaje" placeholder="Escribí tu mensaje" rows="7"></textarea> <br>
+                <p>¿Querés recibir nuestras novedades por mail?</p>
+                <label for="news_mail">Sí</label>
+                <input type="radio" name="news_mail">
+                <label for="news_mail">No</label>
+                <input type="radio" name="news_mail"><br>
+                <p>Tildar si sos operador/a</p>
+                <label for="is_op"></label>
+                <input type="checkbox" name="is_op">
+                <input type="submit" name="Enviar" value="Enviar Formulario">
+                <input type="reset" name="Limpiar Formulario">
+            </fieldset>
+        </form>
+    </main>
+    <footer id="pieStandardAxa">
+        <ul>
+            <li><a href="">One AXA</a></li>
+            <li><a href="">YES</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* Imagen Logo y link al index*/
+@mixin mixinLogoAxaDiversity{
+    display: inline-block;
+    margin: 1%;
+    height: 80px;
+    width: 80px;
+}
+
+/*Header - Nav */
+@mixin mixinNavPrincipal {
+    background-color: rgb(78, 78, 78);
+    display: inline-block;
+    width: 100vw;
+    max-height: 30vh;
+  }
