@@ -4,385 +4,49 @@
 
 
 html {
-    margin: 0;
-    padding: 0;
-}
-
-/*Fuente para que se aplique en todo el sitio por default */
-body {
-    font-family: $font-type;
-    font-weight: $font-w-body;
-    color: $font-white;
-}
-
-/* ---------------------------------------------- */
-/* Bootstrap */
-/*
- * Globals
- */
-
-.bd-placeholder-img {
-    font-size: $font-s-sm;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: $font-s-md;
-    }
-  }
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-}
-
-
-/*
- * Base structure
- */
-
-body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-}
-
-.cover-container {
-  max-width: 42em;
-  min-height: 36em;
-}
-
-/*
- * Header
- */
-
-.nav-masthead .nav-link {
-    padding: .25rem 0;
-    font-weight: 700;
-    color: rgba(255, 255, 255, .5);
-    background-color: transparent;
-    border-bottom: .25rem solid transparent;
-  }
-  
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-    border-bottom-color: rgba(255, 255, 255, .25);
-  }
-  
-.nav-masthead .nav-link + .nav-link {
-    margin-left: 1rem;
-  }
-  
-.nav-masthead .active {
-    color: $font-white;
-    border-bottom-color: #fff;
-  }
-
-/* ---------------------------------------------- */
-
-
-/* --------- HEADER ------------ */
-
-/* Imagen Logo y link al index*/
-#logoDiversityAxa {
-    @include mixinLogoAxaDiversity;
-}
-
-/*Maquetado de header para todo el sitio */
-#navStandardAxa {
-    @include mixinNavPrincipal;
-}
-
-#navStandardAxa ul{
-	margin: 3% auto;
-	width: 70%;
-	float: right;
-}
-
-#navStandardAxa li{
-	float: left;
-	margin: 1% 2%;
-	list-style: none;
-}
-
-#navStandardAxa a{
-	text-decoration: none;
-	color: #fff;
-	font-weight: 700;
-	font-size: 1.5rem;
-}
-
-/* ---------------------------------------------- */
-/* ---------------------------------------------- */
-
-/* --------- FOOTER ------------ */
-
-/*Maquetado de footer para todo el sitio */
-#pieStandardAxa {
-  background-color: cadetblue;
-	width: 100vw;
-	height: 10vh;
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#pieStandardAxa ul{
-	list-style: none;
-	display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-}
-
-#pieStandardAxa a{
-	text-decoration: none;
-	color: #fff;
-	font-weight: 300;
-	margin: 0px 10px 0px 10px;
-}
-/* ---------------------------------------------- */
-/* ---------------------------------------------- */
-
-
-/* --------- SITES ------------ */
-
-/* Maquetado de base reutilizable en todo el sitio */
-/* Main */
-.cuerpoStandard{
-	background: linear-gradient(180deg, rgba(0,0,91,1) 64%, rgba(255,255,255,1) 100%);
-	min-height: 80vh;
-}
-
-/* Título H3 */
-.titleInPage {
-	display: flex;
-	justify-content: center;
-	padding: 2%;
-	font-weight: 700;
-}
-
-/* ---------------------------------------------- */
-
-/* Maquetado para cada página individual */
-/* HOME */
-/* Main background */
-.fondoInicio {
-	background-image: url(../images/axaworkfondo.jpg);
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	width: 100vw;
-}
-
-/*Estilos para frase de presentación */
-.fraseMotivacional{
-	float: right;
-	margin: 3%;
-	right: 200px;
-	top: 300px;
-	font-size: 3rem;
-	font-weight: 500;
-	color: rgb(213, 213, 221);
-	text-shadow: -1px -1px 1px #aaa,
-            	 0px 4px 1px rgba(0,0,0,0.5),
-             	 4px 4px 5px rgba(0,0,0,0.7),
-            	 0px 0px 7px rgba(0,0,0,0.4);
-}
-
-.fadeInPhrase {
-	-webkit-animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2021-6-26 19:0:46
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation fade-in
- * ----------------------------------------
- */
- @-webkit-keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-  }
-  @keyframes fade-in {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-  }
-/* ---------------------------------------------- */
-
-/* HOME > CONTACTO */
-
-/* Maquetado Formulario de contacto */
-.contactForm {
-	display: flex;
-	justify-content: center;
-	padding: 3%;
-}
-
-/* ---------------------------------------------- */
-
-
-/* HOME > FAQ */
-
-/* Grilla de preguntas */
-.faqSite {
-	height: 55vh;
-	width: 90vw;
-	display: grid;
-	grid-template-columns: 6fr 2fr;
-	grid-template-rows: 6fr 6fr;
-	grid-gap: 10px;
-	align-items: center;
-	justify-content: center;
-	grid-template-areas: 
-		"faqContratosSection tipsInSection"
-		"faqToolsSection tipsInSection";
-	border: 3px solid rgb(87, 87, 87);
-	background-color: #4976ba;
-}
-
-.faqSite h4{
-	padding-left: 20px;
-}
-
-.faqSite div{
-	padding: 10px;
-}
-
-.faqContratos{
-	grid-area: faqContratosSection;
-}
-
-.faqTools{
-	grid-area: faqToolsSection;
-}
-
-.tipsIn {
-	grid-area: tipsInSection;
-	align-self: start;
-	padding-top: 30px;
-}
-
-/* ---------------------------------------------- */
-
-
-
-/* HOME > INFO */
-
-
-/* ---------------------------------------------- */
-
-
-
-
-/* HOME > START */
-
-/* ---------------------------------------------- */
-
-
-
-/* HOME > TTT */
-.tutorialsArea {
-	display: flex;
-	justify-content: center;
-	padding: 2%;
-}
-
-/* ---------------------------------------------- */
-
-
-				/* ---------------------------------------------- */
-
-								/* RESPONSIVE */
-
-				/* ---------------------------------------------- */
-
-@media screen and (max-width:768px) 
-
-{
-	/* Se remueve la frase */
-	.fraseMotivacional{
-		display: none;
-	}
-
-	/* Cambia la imagen de fondo */
-	.fondoInicio {
-		background-image: url(../images/axafondosm.jpg);
-		background-size:contain;
-		background-repeat: no-repeat;
-		background-position: top;
-		background-color: rgba(0,0,91,1);
-		height: 100vh;
-		width: 100vw;
-	}
-
-	/* Cambia tamaño del logo */
-	#logoDiversityAxa{
-		height: 25%;
-		width: 25%;
-		margin-top: 5%;
-		margin-left: 3%;
-	}
-
-	/* Quita el flotado del nav */
-	#navStandardAxa li{
-		float:unset;
-		margin-left: 10%;
-	}
-
-	/* Reduce el grosor del nav */
-	#navStandardAxa a{
-		font-weight: 500;
+	margin: 0;
+	padding: 0;
+
+	/*Fuente para que se aplique en todo el sitio por default */
+	body {
+		font-family: $font-type;
+		font-weight: $font-w-body;
+		color: $font-white;
+
+		/* --------- HEADER HOME ------------ */
+		header{
+			.bi {
+				vertical-align: -.125em;
+			  }
+			
+			/* Main background */
+			.fondoInicio {
+				background-image: url(../images/axaworkfondo.jpg);
+				background-size: cover;
+				background-position: center;
+				height: 100vh;
+				width: 100vw;
+
+				/*Estilos para frase de presentación */
+				.fraseMotivacional{
+					float: right;
+					margin: 3%;
+					right: 20%;
+					top: 30%;
+					font-size: 3rem;
+					font-weight: 500;
+					color: rgb(213, 213, 221);
+					text-shadow: -1px -1px 1px #aaa,
+								0px 4px 1px rgba(0,0,0,0.5),
+								4px 4px 5px rgba(0,0,0,0.7),
+								0px 0px 7px rgba(0,0,0,0.4);
+				}
+
+				.fadeInPhrase {
+					-webkit-animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+							animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				}
+			}
+		}
 	}
 }
-
-@media screen and (max-width:1024px) 
-{
-	/* Cambia tamaño del logo */
-	#logoDiversityAxa{
-		height: 20%;
-		width: 20%;
-	}
-
-	.fondoInicio {
-		background-size:contain;
-		background-repeat: no-repeat;
-		background-position: top;
-		background-color: rgba(0,0,91,1);
-		height: 100vh;
-		width: 100vw;
-	}
-
-	#navStandardAxa li{
-		float:unset;
-		margin-left: 10%;
-	}
-}
-
-/* Pasos para SASS */
-/* 
-1. npm init
-2. npm install -D node-sass nodemon
-3. "build-css": "node-sass --include-path scss scss/nombreDelScss.scss css/nombreDelCss.css","watch-css": "nodemon -e scss -x \"npm run build-css\""
-4. editar el path del sass y el css (tratar que el nombre de sass y css sea el mismo)
-5. npm run watch-css
-*/
