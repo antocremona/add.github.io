@@ -1,8 +1,11 @@
 @charset "UTF-8";
 /*Fuente de google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+/*Fuente de google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
 /* Imagen Logo y link al index*/
 /*Header - Nav */
+/*Main Home */
 html {
   margin: 0;
   padding: 0;
@@ -12,26 +15,43 @@ html {
     font-weight: font-weight 300;
     color: color #fff;
     /* --------- HEADER HOME ------------ */ }
-    html body header {
+    html body header .bi {
+      vertical-align: -.125em; }
+    html body main {
       /* Main background */ }
-      html body header .bi {
-        vertical-align: -.125em; }
-      html body header .fondoInicio {
+      html body main .fondoInicio {
         background-image: url(../images/axaworkfondo.jpg);
         background-size: cover;
         background-position: center;
         height: 100vh;
         width: 100vw;
-        /*Estilos para frase de presentación */ }
-        html body header .fondoInicio .fraseMotivacional {
+        /*Estilos para frase de presentación */
+        /**
+						* ----------------------------------------
+						* animation fade-in (sacada de animista)
+						* ----------------------------------------
+						*/ }
+        html body main .fondoInicio .fraseMotivacional {
           float: right;
           margin: 3%;
           right: 20%;
           top: 30%;
           font-size: 3rem;
           font-weight: 500;
-          color: #d5d5dd;
+          color: #23d38a;
           text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5), 4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4); }
-        html body header .fondoInicio .fadeInPhrase {
+        html body main .fondoInicio .fadeInPhrase {
           -webkit-animation: fade-in 4.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
           animation: fade-in 4.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

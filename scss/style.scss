@@ -1,6 +1,14 @@
+// Bootstrap sass
+@import "../node_modules/bootstrap/scss/functions";
+
+// Partials propios
 @import "colores";
 @import "fuentes";
 @import "mixins";
+
+// Otros componentes requeridos de bootstrap
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
 
 html {
@@ -18,7 +26,8 @@ html {
 			.bi {
 				vertical-align: -.125em;
 			  }
-			
+			}
+		main {
 			/* Main background */
 			.fondoInicio {
 				background-image: url(../images/axaworkfondo.jpg);
@@ -35,18 +44,38 @@ html {
 					top: 30%;
 					font-size: 3rem;
 					font-weight: 500;
-					color: rgb(213, 213, 221);
+					color: rgb(35, 211, 138);
 					text-shadow: -1px -1px 1px #aaa,
 								0px 4px 1px rgba(0,0,0,0.5),
 								4px 4px 5px rgba(0,0,0,0.7),
 								0px 0px 7px rgba(0,0,0,0.4);
+					}
+					.fadeInPhrase {
+						-webkit-animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+						animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+						}
+					/**
+						* ----------------------------------------
+						* animation fade-in (sacada de animista)
+						* ----------------------------------------
+						*/
+						@-webkit-keyframes fade-in {
+							0% {
+							opacity: 0;
+							}
+							100% {
+							opacity: 1;
+							}
+						}
+						@keyframes fade-in {
+							0% {
+							opacity: 0;
+							}
+							100% {
+							opacity: 1;
+							}
+						}
 				}
-
-				.fadeInPhrase {
-					-webkit-animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-							animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-				}
-			}
-		}
+		}		
 	}
 }

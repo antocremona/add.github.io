@@ -1,3 +1,6 @@
+@import 'colores';
+@import 'fuentes';
+
 /* Imagen Logo y link al index*/
 @mixin mixinLogoAxaDiversity{
     display: inline-block;
@@ -8,8 +11,14 @@
 
 /*Header - Nav */
 @mixin mixinNavPrincipal {
-    background-color: rgb(78, 78, 78);
+    background-color: $bg-color-grey;
     display: inline-block;
     width: 100vw;
     max-height: 30vh;
   }
+
+/*Main Home */
+@mixin fondoFull {
+
+    
+}
