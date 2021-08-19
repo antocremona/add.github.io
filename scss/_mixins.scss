@@ -1,3 +1,6 @@
+@import 'colores';
+@import 'fuentes';
+
 /* Imagen Logo y link al index*/
 @mixin mixinLogoAxaDiversity{
     display: inline-block;
@@ -8,8 +11,97 @@
 
 /*Header - Nav */
 @mixin mixinNavPrincipal {
-    background-color: rgb(78, 78, 78);
+    background-color: $bg-color-grey;
     display: inline-block;
     width: 100vw;
     max-height: 30vh;
   }
+
+/*Main Home */
+
+// Background
+@mixin fondoLG {
+    background-image: url(../images/axaworkfondo.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    width: 100vw;
+}
+
+@mixin fondoSM {
+    background-image: url(../images/axafondosm.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30%;
+    background-color: rgba(0,0,91,1);
+    height: 100vh;
+    width: 100vw;
+}
+
+
+// Frase animada
+@mixin fraseInicio {
+    z-index: 100;
+    position: fixed;
+    float: right;
+    margin: 3%;
+    right: 20%;
+    top: 40%;
+    font-size: 3rem;
+    font-weight: 500;
+	color: rgb(213, 213, 221);
+	text-shadow: -1px -1px 1px #aaa,
+            	 0px 4px 1px rgba(0,0,0,0.5),
+             	 4px 4px 5px rgba(0,0,0,0.7),
+            	 0px 0px 7px rgba(0,0,0,0.4);
+}
+
+@mixin footerBase {
+    background-color: #4976ba;
+	width: 100vw;
+	height: 10vh;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin footerBaseUl {
+    list-style: none;
+    display: flex; 
+}
+
+@mixin footerBaseUla {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin: 0px 10px;
+}
+
+@mixin titleH3 {
+    background-color: rgba(0,0,91,1);
+    color: blanchedalmond;
+    padding: 0.5rem 0;
+}
+
+@mixin contratosLG {
+    margin: 5em;
+}
+
+@mixin grillaFAQ {
+    height: 90vh;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: 6fr 6fr;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: 
+        "faqContratosSection tipsInSection"
+        "faqToolsSection tipsInSection";
+    border: 3px solid rgb(87, 87, 87);
+    background-color: #96aac9;
+    margin: 1rem;
+}

@@ -1,37 +1,133 @@
 @charset "UTF-8";
 /*Fuente de google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
+/*Fuente de google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap");
 /* Imagen Logo y link al index*/
 /*Header - Nav */
+/*Main Home */
 html {
   margin: 0;
   padding: 0;
   /*Fuente para que se aplique en todo el sitio por default */ }
   html body {
-    font-family: font-family "Source Sans Pro", sans-serif;
-    font-weight: font-weight 300;
-    color: color #fff;
-    /* --------- HEADER HOME ------------ */ }
+    /* --------- HEADER ------------ */
+    /* Main background HOME */
+    /* RESPONSIVE HOME */
+    /*Estilos para frase de presentación */
+    /**
+			* ----------------------------------------
+			* animation fade-in (sacada de animista)
+			* ----------------------------------------
+			*/
+    /* Grilla de preguntas */
+    /* ---------------------------------------------- */
+    /* HOME > TTT */ }
     html body header {
-      /* Main background */ }
+      background-color: #6c757d; }
       html body header .bi {
         vertical-align: -.125em; }
-      html body header .fondoInicio {
-        background-image: url(../images/axaworkfondo.jpg);
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        width: 100vw;
-        /*Estilos para frase de presentación */ }
-        html body header .fondoInicio .fraseMotivacional {
-          float: right;
-          margin: 3%;
-          right: 20%;
-          top: 30%;
-          font-size: 3rem;
-          font-weight: 500;
-          color: #d5d5dd;
-          text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5), 4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4); }
-        html body header .fondoInicio .fadeInPhrase {
-          -webkit-animation: fade-in 4.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-          animation: fade-in 4.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+    html body .fondoInicio {
+      background-image: url(../images/axaworkfondo.jpg);
+      background-size: cover;
+      background-position: top;
+      height: 100vh;
+      width: 100vw; }
+    @media screen and (max-width: 768px) {
+      html body {
+        /* Se remueve el logo */
+        /* Se remueve la frase */
+        /* Cambia la imagen de fondo */ }
+        html body .logoHome {
+          display: none; }
+        html body .fraseMotivacional {
+          display: none; }
+        html body .fondoInicio {
+          background-image: url(../images/axafondosm.jpg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin-top: 30%;
+          background-color: #00005b;
+          height: 100vh;
+          width: 100vw; } }
+    html body .fraseMotivacional {
+      z-index: 100;
+      position: fixed;
+      float: right;
+      margin: 3%;
+      right: 20%;
+      top: 40%;
+      font-size: 3rem;
+      font-weight: 500;
+      color: #d5d5dd;
+      text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5), 4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4); }
+    html body .fadeInPhrase {
+      -webkit-animation: fade-in 4.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      animation: fade-in 4.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    html body main h3 {
+      background-color: #00005b;
+      color: blanchedalmond;
+      padding: 0.5rem 0; }
+    html body .faqSite {
+      height: 90vh;
+      width: 90vw;
+      display: grid;
+      grid-template-columns: 6fr 2fr;
+      grid-template-rows: 6fr 6fr;
+      grid-gap: 10px;
+      align-items: center;
+      justify-content: center;
+      grid-template-areas: "faqContratosSection tipsInSection" "faqToolsSection tipsInSection";
+      border: 3px solid #575757;
+      background-color: #96aac9;
+      margin: 1rem; }
+    html body h4 {
+      padding-left: 20px; }
+    html body .faqSite div {
+      padding: 10px; }
+    html body .faqContratos {
+      grid-area: faqContratosSection; }
+    html body .faqTools {
+      grid-area: faqToolsSection; }
+    html body .tipsIn {
+      grid-area: tipsInSection;
+      align-self: start;
+      padding-top: 30px; }
+    @media screen and (min-width: 768px) {
+      html body {
+        /*Se amplían los espacios de las tarjetas */ }
+        html body .contratosCards {
+          margin: 5rem; } }
+    html body .tutorialsArea {
+      display: flex;
+      justify-content: center;
+      padding: 2%; }
+    html body footer {
+      background-color: #4976ba;
+      width: 100vw;
+      height: 10vh;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      html body footer ul {
+        list-style: none;
+        display: flex; }
+        html body footer ul a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: 300;
+          margin: 0px 10px; }

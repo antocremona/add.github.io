@@ -13,26 +13,23 @@
     <!-- Links CSS -->
     <link rel="stylesheet" href="../css/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>FAQ</title>
 </head>
-<body>
-    <header id="navStandardAxa">
-        <nav>
-            <!-- Logo -->
-            <a href="../index.html">
-                <img id="logoDiversityAxa" src="../images/axa_logo_lgbt_rgb_300dpi.png" alt="logo axa assistance diversidad">
-            </a>
-            <!-- Barra de navegación -->
-            <ul>
-                <li><a href="start.html">Start</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="ttt.html">Tips / Tutoriales</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+<body class="d-flex flex-column h-100 w-100 bodyStart">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-3">
+        <!-- Logo -->
+        <a href="../index.html" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none">
+            <img class="bi me-2" width="75" height="75" src="../images/axa_logo_lgbt_rgb_300dpi.png" alt="logo axa assistance diversidad">
+        </a>
+        <!-- Barra de navegación -->
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a class="nav-link px-3 link-dark" href="start.html">Start</a></li>
+            <li><a class="nav-link px-3 link-dark" aria-current="page" href="FAQ.html">FAQ</a></li>
+            <li><a class="nav-link px-3 link-dark" href="ttt.html">Tips / Tutoriales</a></li>
+            <li><a class="nav-link px-3 link-dark" href="info.html">Info</a></li>
+            <li><a class="nav-link px-3 link-dark" href="contacto.html">Contacto</a></li>
+        </ul>
     </header>
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -40,11 +37,11 @@
           <li class="breadcrumb-item active" aria-current="page">FAQ</li>
         </ol>
     </nav>
-    <main class="cuerpoStandard">
+    <main>
         <!-- Preguntas frecuentes en un acordeón -->
-        <h3 class="titleInPage">Preguntas Frecuentes</h3>
-        <div class="faqSite">
-            <section class="faqContratos">
+        <h3>Preguntas Frecuentes</h3>
+        <div class="row faqSite">
+            <section class="col-sm-6 faqContratos">
                 <h4>Preguntas sobre contratos</h4>
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, debitis iure dolorem repellat deleniti dolorum recusandae ex reiciendis nobis eius cupiditate maiores veniam, placeat optio libero repellendus, saepe provident?</p>
@@ -53,7 +50,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo non eius. Velit accusantium ex unde! Exercitationem iusto id, placeat doloribus quia distinctio! Facilis corrupti debitis labore veritatis! Debitis, quas?</p>
                 </div>
             </section>
-            <section class="faqTools">
+            <section class="col-sm-6 faqTools">
                 <h4>Preguntas sobre herramientas</h4>
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati earum, debitis iure dolorem repellat deleniti dolorum recusandae ex reiciendis nobis eius cupiditate maiores veniam, placeat optio libero repellendus, saepe provident?</p>

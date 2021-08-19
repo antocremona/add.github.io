@@ -1,6 +1,14 @@
+// Bootstrap sass
+@import "../node_modules/bootstrap/scss/functions";
+
+// Partials propios
 @import "colores";
 @import "fuentes";
 @import "mixins";
+
+// Otros componentes requeridos de bootstrap
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
 
 
 html {
@@ -9,44 +17,131 @@ html {
 
 	/*Fuente para que se aplique en todo el sitio por default */
 	body {
-		font-family: $font-type;
-		font-weight: $font-w-body;
-		color: $font-white;
-
-		/* --------- HEADER HOME ------------ */
+		/* --------- HEADER ------------ */
 		header{
+			background-color: $gray-600;
 			.bi {
 				vertical-align: -.125em;
 			  }
-			
-			/* Main background */
+			}
+			/* Main background HOME */
 			.fondoInicio {
-				background-image: url(../images/axaworkfondo.jpg);
-				background-size: cover;
-				background-position: center;
-				height: 100vh;
-				width: 100vw;
+				@include fondoLG
+			}
 
-				/*Estilos para frase de presentación */
-				.fraseMotivacional{
-					float: right;
-					margin: 3%;
-					right: 20%;
-					top: 30%;
-					font-size: 3rem;
-					font-weight: 500;
-					color: rgb(213, 213, 221);
-					text-shadow: -1px -1px 1px #aaa,
-								0px 4px 1px rgba(0,0,0,0.5),
-								4px 4px 5px rgba(0,0,0,0.7),
-								0px 0px 7px rgba(0,0,0,0.4);
+			/* RESPONSIVE HOME */
+			@media screen and (max-width:768px) 
+			{
+				/* Se remueve el logo */
+				.logoHome {
+					display: none;
 				}
 
-				.fadeInPhrase {
-					-webkit-animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-							animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				/* Se remueve la frase */
+				.fraseMotivacional{
+					display: none;
+				}
+
+				/* Cambia la imagen de fondo */
+				.fondoInicio {
+					@include fondoSM
+				}
+			}
+
+			/*Estilos para frase de presentación */
+			.fraseMotivacional{
+				@include fraseInicio
+				}
+			.fadeInPhrase {
+				-webkit-animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				animation: fade-in 4.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				}
+			/**
+			* ----------------------------------------
+			* animation fade-in (sacada de animista)
+			* ----------------------------------------
+			*/
+			@-webkit-keyframes fade-in {
+				0% {
+					opacity: 0;
+					}
+				100% {
+					opacity: 1;
+					}
+				}
+			@keyframes fade-in {
+				0% {
+					opacity: 0;
+					}
+				100% {
+					opacity: 1;
+					}
+				}
+		// Componentes del Main generales
+		main {
+			h3 {
+				@include titleH3;
+			}
+		}
+		
+		/* Grilla de preguntas */
+		.faqSite {
+			@include grillaFAQ;
+		}
+
+		h4{
+			padding-left: 20px;
+		}
+
+		.faqSite div{
+			padding: 10px;
+		}
+
+		.faqContratos{
+			grid-area: faqContratosSection;
+		}
+
+		.faqTools{
+			grid-area: faqToolsSection;
+		}
+
+		.tipsIn {
+			grid-area: tipsInSection;
+			align-self: start;
+			padding-top: 30px;
+		}
+
+		/* ---------------------------------------------- */
+
+		// Responsive para la página START
+		@media screen and (min-width:768px)
+		{
+			/*Se amplían los espacios de las tarjetas */
+			.contratosCards {
+				margin: 5rem;
+			}
+		}
+		/* HOME > TTT */
+		.tutorialsArea {
+			display: flex;
+			justify-content: center;
+			padding: 2%;
+		}
+
+
+		// Footer de todo el sitio
+		footer {
+			@include footerBase;
+			ul {
+				@include footerBaseUl;
+				a{
+					@include footerBaseUla;
 				}
 			}
 		}
+				
 	}
 }
+
+
+
